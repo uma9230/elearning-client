@@ -15,7 +15,7 @@ app
       server.use(
         '/api',
         createProxyMiddleware({
-          target: 'http://localhost:4000',
+          target: 'https://learning-server-84ee2619027f.herokuapp.com/',
           changeOrigin: true,
         })
       );
@@ -25,9 +25,13 @@ app
     });
     server.listen(3000, (err) => {
       if (err) throw err;
-      console.log("> Ready on http://localhost:4000");
+      console.log(
+        "> Ready on https://learning-server-84ee2619027f.herokuapp.com/"
+      );
     });
   })
   .catch((err) => {
     console.log("Error", err);
   });
+
+  // "http://localhost:4000";
